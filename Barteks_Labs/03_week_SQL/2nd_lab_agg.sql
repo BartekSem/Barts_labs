@@ -3,7 +3,9 @@
 
 USE sakila;
 #1.1 Determine the shortest and longest movie durations and name the values as max_duration and min_duration.
-SELECT MAX(length) AS `max_duration`,  MIN(length) AS `max_duration`
+SELECT 
+	MAX(length) AS `max_duration`,  
+    MIN(length) AS `max_duration`
 FROM film;
 
 #1.2. Express the average movie duration in hours and minutes. Don't use decimals. 
@@ -34,9 +36,16 @@ FROM rental
 LIMIT 20;
 
 # 3. You need to ensure that customers can easily access information about the movie collection. 
-# To achieve this, retrieve the film titles and their rental duration. 
-# If any rental duration value is NULL, replace it with the string 'Not Available'. 
-# Sort the results of the film title in ascending order.
+	# To achieve this, retrieve the film titles and their rental duration. 
+	# If any rental duration value is NULL, replace it with the string 'Not Available'. 
+	# Sort the results of the film title in ascending order.
+
+	# hint: we can you the IFNULL function for this
+
+SELECT title,
+IFNULL(length,`Not available`) AS length
+FROM film
+ORDER BY title;
 
 # Please note that even if there are currently no null values in the rental duration column, 
 # the query should still be written to handle such cases in the future.

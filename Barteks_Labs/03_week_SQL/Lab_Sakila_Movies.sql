@@ -1,7 +1,13 @@
 USE sakila;
 
 SELECT * 
-FROM actor, customer, film;
+FROM film;
+
+SELECT * 
+FROM actor;
+
+SELECT * 
+FROM customer;
 
 SELECT title
 FROM film;
@@ -18,12 +24,12 @@ SELECT DISTINCT release_year
 FROM film;
 
 # Determine the number of stores that the company has.
-SELECT SUM(address_id)
+SELECT COUNT(address_id) AS store_numbers
 FROM store;
 
 # Determine the number of employees that the company has.
 
-SELECT SUM(staff_id)
+SELECT COUNT(staff_id) AS number_of_staff
 FROM staff;
 
 # Determine how many films are available for rent and how many have been rented.
@@ -60,4 +66,5 @@ WHERE length > 100 AND title LIKE '%ARMAGEDDON%'
 ORDER BY length ASC 
 
 # 7.3 Determine the number of films that include Behind the Scenes content
+
 
