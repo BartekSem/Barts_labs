@@ -16,10 +16,11 @@ WHERE film_id = (
 # for this query you the tables: FILM(length, title), Inventory(film_id)
 # crweate a subquer to average lengt and use this child in the paretn to filter 
 
-SELECT title AS `MOVIE LONGER THAN THE AVG`
+SELECT title AS `MOVIE LONGER THAN THE AVG`, length 
 FROM film 
 WHERE film_id > (SELECT AVG(film_id)
-				FROM film);
+				FROM film)
+ORDER BY title;
 
 # Use a subquery to display all actors who appear in the film "Alone Trip".
 # for this query you the tables: Actor(first_name, last_name), Film_actor (), Film(Title)
@@ -75,3 +76,65 @@ WHERE address_id IN (SELECT address_id
 #7. Find the films rented by the most profitable customer in the Sakila database. 
 	# You can use the customer and payment tables to find the most profitable customer, 
 	# i.e., the customer who has made the largest sum of payments.
+    
+    
+    
+
+
+# use avarge as a value 
+#
+
+# this is not the task. it the total average per customer
+SELECT customer_id, SUM(amount)
+FROM payment    
+GROUP BY customer_id
+HAVING SUM(amount) > 100;
+                
+              
+# 7.Find the films rented by the most profitable customer in the Sakila database. 
+# You can use the customer and payment tables to find the most profitable customer, i.e., 
+# the customer who has made the largest sum of payments.              
+     
+SELECT title
+FROM film
+WHERE film_id IN (SELECT film_id
+				 FROM inventory 
+				 WHERE inventory_id IN (SELECT inventory_id
+									   FROM rental
+									   WHERE customer_id = (SELECT customer_id								
+															FROM payment									
+															GROUP BY customer_id
+															ORDER BY SUM(amount) DESC
+															LIMIT 1)));
+	
+SELECT title
+FROM film     
+JOIN inventory 
+USING(film_id)
+JOIN rental
+USING(inventory_id)
+JOIN payment 
+USING(customer_id) 
+WHERE customer_id = (SELECT customer_id								
+					FROM payment									
+					GROUP BY customer_id
+					ORDER BY SUM(amount) DESC
+					LIMIT 1)
+GROUP BY title;
+#ORDER BY title
+              
+# 8. Retrieve the client_id and the total_amount_spent of 
+	# those clients who spent more than the average of the total_amount spent by each client. 
+	# You can use subqueries to accomplish this.             
+              
+SELECT customer_id, SUM(amount) AS total_spend_p_c
+FROM payment    
+GROUP BY customer_id
+HAVING total_spend_p_c >  
+	(SELECT ROUND(AVG(total_spend),2)						
+	FROM 	(SELECT ROUND(SUM(amount),2) AS "total_spend"									
+			FROM payment									
+			GROUP BY customer_id) AS t); # when using in from we need to name this subquerey
+
+#people who have spent more then aver spend by person 
+#the people who spend more 
