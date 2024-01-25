@@ -1,4 +1,4 @@
-Year,sum_column,Duration,Visitors_total,Visitor_day,Beer_price,Beer_consumption,Chicken_Price,Chicken_consumption, Inflation Rate
+Year,Goals,Duration,Visitors_total,Visitor_day,Beer_price,Beer_consumption,Chicken_Price,Chicken_consumption, Inflation_Rate
 1993,4,16,6.5,406,4.71,51933,5.25,733517,4.5
 1994,3,16,6.6,413,4.89,52108,5.39,663135,2.7
 1995,4,16,6.7,419,5.15,50162,5.54,628890,1.7
