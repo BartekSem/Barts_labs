@@ -17,7 +17,7 @@
     <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
     <WindowsPersistSimpleIdentifiers />
   </document-format-change-manifest>
-  <repository-location id='correlaton_analysis' path='/workbooks' revision='1.1' />
+  <repository-location id='correlaton_analysis' path='/workbooks' revision='1.3' />
   <preferences>
     <preference name='ui.encoding.shelf.height' value='24' />
     <preference name='ui.shelf.height' value='26' />
@@ -33,6 +33,9 @@
         <named-connections>
           <named-connection caption='merged_df' name='textscan.1gvqlfx0twhmnt13vm1bf04pigb5'>
             <connection class='textscan' directory='/Users/bart/Documents/GitHub/first_repository/mini_project' filename='merged_df.csv' password='' server='' workgroup-auth-mode='as-is' />
+          </named-connection>
+          <named-connection caption='oktober' name='textscan.1ml04cq1x8mjd417zsddl1jb68v1'>
+            <connection class='textscan' directory='/Users/bart/Documents/GitHub/first_repository/mini_project/CSVs' filename='oktober.csv' password='' server='' workgroup-auth-mode='as-is' />
           </named-connection>
         </named-connections>
         <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.1gvqlfx0twhmnt13vm1bf04pigb5' name='merged_df.csv' table='[merged_df#csv]' type='table'>
@@ -247,6 +250,7 @@
               <aggregation>Sum</aggregation>
               <approx-count>19</approx-count>
               <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[merged_df.csv_EEC5675468A0471F9FFED6A0AACD0A7F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>Goals</remote-name>
@@ -260,6 +264,7 @@
               <aggregation>Sum</aggregation>
               <approx-count>10</approx-count>
               <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[merged_df.csv_EEC5675468A0471F9FFED6A0AACD0A7F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>Duration</remote-name>
@@ -273,6 +278,7 @@
               <aggregation>Sum</aggregation>
               <approx-count>3</approx-count>
               <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[merged_df.csv_EEC5675468A0471F9FFED6A0AACD0A7F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>Visitors_total</remote-name>
@@ -287,6 +293,7 @@
               <approx-count>12</approx-count>
               <contains-null>true</contains-null>
               <collation flag='0' name='LDE_RDE' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[merged_df.csv_EEC5675468A0471F9FFED6A0AACD0A7F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>Visitor_day</remote-name>
@@ -300,6 +307,7 @@
               <aggregation>Sum</aggregation>
               <approx-count>14</approx-count>
               <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[merged_df.csv_EEC5675468A0471F9FFED6A0AACD0A7F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>Beer_price</remote-name>
@@ -314,6 +322,7 @@
               <approx-count>18</approx-count>
               <contains-null>true</contains-null>
               <collation flag='0' name='LDE_RDE' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[merged_df.csv_EEC5675468A0471F9FFED6A0AACD0A7F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>Beer_consumption</remote-name>
@@ -327,6 +336,7 @@
               <aggregation>Sum</aggregation>
               <approx-count>19</approx-count>
               <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[merged_df.csv_EEC5675468A0471F9FFED6A0AACD0A7F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>Chicken_Price</remote-name>
@@ -341,6 +351,7 @@
               <approx-count>18</approx-count>
               <contains-null>true</contains-null>
               <collation flag='0' name='LDE_RDE' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[merged_df.csv_EEC5675468A0471F9FFED6A0AACD0A7F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>Chicken_consumption</remote-name>
@@ -354,6 +365,7 @@
               <aggregation>Sum</aggregation>
               <approx-count>19</approx-count>
               <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[merged_df.csv_EEC5675468A0471F9FFED6A0AACD0A7F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>Inflation_Rate</remote-name>
@@ -368,6 +380,7 @@
               <approx-count>16</approx-count>
               <contains-null>true</contains-null>
               <collation flag='0' name='LDE_RDE' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[merged_df.csv_EEC5675468A0471F9FFED6A0AACD0A7F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
             </metadata-record>
           </metadata-records>
         </connection>
@@ -426,9 +439,20 @@
             <column-instance column='[Year]' derivation='None' name='[none:Year:qk]' pivot='key' type='quantitative' />
             <column-instance column='[Beer_consumption]' derivation='Sum' name='[sum:Beer_consumption:qk]' pivot='key' type='quantitative' />
           </datasource-dependencies>
-          <shelf-sorts>
-            <shelf-sort-v2 dimension-to-sort='[federated.0w5o4h31hg7f4v1773y5p0qa2566].[none:Goals:ok]' direction='ASC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.0w5o4h31hg7f4v1773y5p0qa2566].[sum:Beer_consumption:qk]' shelf='rows' />
-          </shelf-sorts>
+          <manual-sort column='[federated.0w5o4h31hg7f4v1773y5p0qa2566].[none:Goals:ok]' direction='ASC'>
+            <dictionary>
+              <bucket>16</bucket>
+              <bucket>14</bucket>
+              <bucket>13</bucket>
+              <bucket>11</bucket>
+              <bucket>8</bucket>
+              <bucket>6</bucket>
+              <bucket>4</bucket>
+              <bucket>3</bucket>
+              <bucket>2</bucket>
+              <bucket>1</bucket>
+            </dictionary>
+          </manual-sort>
           <aggregation value='true' />
         </view>
         <style>
@@ -822,8 +846,8 @@
             <dictionary>
               <bucket>&quot;10.87&quot;</bucket>
               <bucket>&quot;10.57&quot;</bucket>
-              <bucket>&quot;9.78&quot;</bucket>
               <bucket>&quot;10.27&quot;</bucket>
+              <bucket>&quot;9.78&quot;</bucket>
               <bucket>&quot;9.09&quot;</bucket>
               <bucket>&quot;8.53&quot;</bucket>
               <bucket>&quot;8.25&quot;</bucket>
@@ -1009,7 +1033,7 @@
       </cards>
       <simple-id uuid='{3C9FB098-F0BF-49B6-A024-4BFBFD5E2AA0}' />
     </window>
-    <window class='worksheet' maximized='true' name='Beer consumption, price '>
+    <window class='worksheet' name='Beer consumption, price '>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -1096,7 +1120,7 @@
       </cards>
       <simple-id uuid='{C84E54E1-22AF-4AAA-8D0E-A48401C0983F}' />
     </window>
-    <window class='worksheet' name='Beer consumption inflation years'>
+    <window class='worksheet' maximized='true' name='Beer consumption inflation years'>
       <cards>
         <edge name='left'>
           <strip size='160'>
