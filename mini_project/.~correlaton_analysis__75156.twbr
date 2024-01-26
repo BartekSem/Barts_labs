@@ -1,0 +1,1245 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20233.23.1227.1336                               -->
+<workbook original-version='18.1' source-build='2023.3.1 (20233.23.1227.1336)' source-platform='mac' version='18.1' xml:base='https://public.tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelExtractV2.true...ObjectModelExtractV2 />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <_.fcp.SingleValuePerNestSorting.true...SingleValuePerNestSorting />
+    <SortTagCleanup />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <repository-location id='correlaton_analysis' path='/workbooks' revision='1.1' />
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource caption='merged_df' inline='true' name='federated.0w5o4h31hg7f4v1773y5p0qa2566' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='merged_df' name='textscan.1gvqlfx0twhmnt13vm1bf04pigb5'>
+            <connection class='textscan' directory='/Users/bart/Documents/GitHub/first_repository/mini_project' filename='merged_df.csv' password='' server='' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.1gvqlfx0twhmnt13vm1bf04pigb5' name='merged_df.csv' table='[merged_df#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='de_DE'>
+            <column datatype='integer' name='Year' ordinal='0' />
+            <column datatype='integer' name='Goals' ordinal='1' />
+            <column datatype='integer' name='Duration' ordinal='2' />
+            <column datatype='string' name='Visitors_total' ordinal='3' />
+            <column datatype='integer' name='Visitor_day' ordinal='4' />
+            <column datatype='string' name='Beer_price' ordinal='5' />
+            <column datatype='integer' name='Beer_consumption' ordinal='6' />
+            <column datatype='string' name='Chicken_Price' ordinal='7' />
+            <column datatype='integer' name='Chicken_consumption' ordinal='8' />
+            <column datatype='string' name='Inflation_Rate' ordinal='9' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='textscan.1gvqlfx0twhmnt13vm1bf04pigb5' name='merged_df.csv' table='[merged_df#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='de_DE'>
+            <column datatype='integer' name='Year' ordinal='0' />
+            <column datatype='integer' name='Goals' ordinal='1' />
+            <column datatype='integer' name='Duration' ordinal='2' />
+            <column datatype='string' name='Visitors_total' ordinal='3' />
+            <column datatype='integer' name='Visitor_day' ordinal='4' />
+            <column datatype='string' name='Beer_price' ordinal='5' />
+            <column datatype='integer' name='Beer_consumption' ordinal='6' />
+            <column datatype='string' name='Chicken_Price' ordinal='7' />
+            <column datatype='integer' name='Chicken_consumption' ordinal='8' />
+            <column datatype='string' name='Inflation_Rate' ordinal='9' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[merged_df.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;de&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;€&quot;</attribute>
+              <attribute datatype='string' name='decimal-char'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;de_DE&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='thousands-char'>&quot;.&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Year]</local-name>
+            <parent-name>[merged_df.csv]</parent-name>
+            <remote-alias>Year</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[merged_df.csv_EEC5675468A0471F9FFED6A0AACD0A7F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Goals</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Goals]</local-name>
+            <parent-name>[merged_df.csv]</parent-name>
+            <remote-alias>Goals</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[merged_df.csv_EEC5675468A0471F9FFED6A0AACD0A7F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Duration</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Duration]</local-name>
+            <parent-name>[merged_df.csv]</parent-name>
+            <remote-alias>Duration</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[merged_df.csv_EEC5675468A0471F9FFED6A0AACD0A7F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Visitors_total</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Visitors_total]</local-name>
+            <parent-name>[merged_df.csv]</parent-name>
+            <remote-alias>Visitors_total</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LDE_RDE' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[merged_df.csv_EEC5675468A0471F9FFED6A0AACD0A7F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Visitor_day</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Visitor_day]</local-name>
+            <parent-name>[merged_df.csv]</parent-name>
+            <remote-alias>Visitor_day</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[merged_df.csv_EEC5675468A0471F9FFED6A0AACD0A7F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Beer_price</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Beer_price]</local-name>
+            <parent-name>[merged_df.csv]</parent-name>
+            <remote-alias>Beer_price</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LDE_RDE' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[merged_df.csv_EEC5675468A0471F9FFED6A0AACD0A7F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Beer_consumption</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Beer_consumption]</local-name>
+            <parent-name>[merged_df.csv]</parent-name>
+            <remote-alias>Beer_consumption</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[merged_df.csv_EEC5675468A0471F9FFED6A0AACD0A7F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Chicken_Price</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Chicken_Price]</local-name>
+            <parent-name>[merged_df.csv]</parent-name>
+            <remote-alias>Chicken_Price</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LDE_RDE' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[merged_df.csv_EEC5675468A0471F9FFED6A0AACD0A7F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Chicken_consumption</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Chicken_consumption]</local-name>
+            <parent-name>[merged_df.csv]</parent-name>
+            <remote-alias>Chicken_consumption</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[merged_df.csv_EEC5675468A0471F9FFED6A0AACD0A7F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Inflation_Rate</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Inflation_Rate]</local-name>
+            <parent-name>[merged_df.csv]</parent-name>
+            <remote-alias>Inflation_Rate</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LDE_RDE' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[merged_df.csv_EEC5675468A0471F9FFED6A0AACD0A7F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Beer consumption' datatype='integer' name='[Beer_consumption]' role='measure' type='quantitative' />
+      <column caption='Beer price' datatype='string' name='[Beer_price]' role='dimension' type='nominal' />
+      <column caption='beer price' datatype='real' name='[Calculation_5072108759543296003]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='FLOAT([Beer_price])' />
+      </column>
+      <column caption='Chicken Price' datatype='string' name='[Chicken_Price]' role='dimension' type='nominal' />
+      <column aggregation='Sum' caption='Chicken consumption' datatype='integer' name='[Chicken_consumption]' role='dimension' type='ordinal' />
+      <column aggregation='Sum' datatype='integer' name='[Goals]' role='dimension' type='ordinal' />
+      <column caption='Inflation Rate' datatype='string' name='[Inflation_Rate]' role='dimension' type='nominal' />
+      <column caption='Visitor day' datatype='integer' name='[Visitor_day]' role='dimension' type='quantitative' />
+      <column caption='Visitors total' datatype='string' name='[Visitors_total]' role='dimension' type='nominal' />
+      <column datatype='integer' name='[Year]' role='dimension' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='merged_df.csv' datatype='table' name='[__tableau_internal_object_id__].[merged_df.csv_EEC5675468A0471F9FFED6A0AACD0A7F]' role='measure' type='quantitative' />
+      <extract _.fcp.ObjectModelExtractV2.true...object-id='' _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' units='records'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='en_US' class='hyper' dbname='/Users/bart/Documents/GitHub/first_repository/mini_project/visuals_tableau.hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='' username='tableau_internal_user'>
+          <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Year</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Year]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Year</remote-alias>
+              <ordinal>0</ordinal>
+              <family>merged_df.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>19</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Goals</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Goals]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Goals</remote-alias>
+              <ordinal>1</ordinal>
+              <family>merged_df.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>10</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Duration</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Duration]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Duration</remote-alias>
+              <ordinal>2</ordinal>
+              <family>merged_df.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Visitors_total</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Visitors_total]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Visitors_total</remote-alias>
+              <ordinal>3</ordinal>
+              <family>merged_df.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>12</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LDE_RDE' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Visitor_day</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Visitor_day]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Visitor_day</remote-alias>
+              <ordinal>4</ordinal>
+              <family>merged_df.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>14</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Beer_price</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Beer_price]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Beer_price</remote-alias>
+              <ordinal>5</ordinal>
+              <family>merged_df.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>18</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LDE_RDE' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Beer_consumption</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Beer_consumption]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Beer_consumption</remote-alias>
+              <ordinal>6</ordinal>
+              <family>merged_df.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>19</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Chicken_Price</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Chicken_Price]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Chicken_Price</remote-alias>
+              <ordinal>7</ordinal>
+              <family>merged_df.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>18</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LDE_RDE' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Chicken_consumption</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Chicken_consumption]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Chicken_consumption</remote-alias>
+              <ordinal>8</ordinal>
+              <family>merged_df.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>19</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Inflation_Rate</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Inflation_Rate]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Inflation_Rate</remote-alias>
+              <ordinal>9</ordinal>
+              <family>merged_df.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>16</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LDE_RDE' />
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Germany&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='merged_df.csv' id='merged_df.csv_EEC5675468A0471F9FFED6A0AACD0A7F'>
+            <properties context=''>
+              <relation connection='textscan.1gvqlfx0twhmnt13vm1bf04pigb5' name='merged_df.csv' table='[merged_df#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='de_DE'>
+                  <column datatype='integer' name='Year' ordinal='0' />
+                  <column datatype='integer' name='Goals' ordinal='1' />
+                  <column datatype='integer' name='Duration' ordinal='2' />
+                  <column datatype='string' name='Visitors_total' ordinal='3' />
+                  <column datatype='integer' name='Visitor_day' ordinal='4' />
+                  <column datatype='string' name='Beer_price' ordinal='5' />
+                  <column datatype='integer' name='Beer_consumption' ordinal='6' />
+                  <column datatype='string' name='Chicken_Price' ordinal='7' />
+                  <column datatype='integer' name='Chicken_consumption' ordinal='8' />
+                  <column datatype='string' name='Inflation_Rate' ordinal='9' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Beer consumption &amp; goals'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Beer consumption &amp; goals, across years</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='merged_df' name='federated.0w5o4h31hg7f4v1773y5p0qa2566' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0w5o4h31hg7f4v1773y5p0qa2566'>
+            <column caption='Beer consumption' datatype='integer' name='[Beer_consumption]' role='measure' type='quantitative' />
+            <column aggregation='Sum' datatype='integer' name='[Goals]' role='dimension' type='ordinal' />
+            <column datatype='integer' name='[Year]' role='dimension' type='quantitative' />
+            <column-instance column='[Goals]' derivation='None' name='[none:Goals:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Year]' derivation='None' name='[none:Year:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Beer_consumption]' derivation='Sum' name='[sum:Beer_consumption:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.0w5o4h31hg7f4v1773y5p0qa2566].[none:Goals:ok]' direction='ASC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.0w5o4h31hg7f4v1773y5p0qa2566].[sum:Beer_consumption:qk]' shelf='rows' />
+          </shelf-sorts>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='height' field='[federated.0w5o4h31hg7f4v1773y5p0qa2566].[none:Year:qk]' value='75' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='height' field='[federated.0w5o4h31hg7f4v1773y5p0qa2566].[none:Goals:ok]' value='42' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.0w5o4h31hg7f4v1773y5p0qa2566].[sum:Beer_consumption:qk]' palette='orange_blue_diverging_10_0' type='interpolated' />
+            <encoding attr='size' field='[federated.0w5o4h31hg7f4v1773y5p0qa2566].[sum:Beer_consumption:qk]' field-type='quantitative' max-size='1' min-size='0' type='rangesize' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.0w5o4h31hg7f4v1773y5p0qa2566].[sum:Beer_consumption:qk]' />
+              <size column='[federated.0w5o4h31hg7f4v1773y5p0qa2566].[sum:Beer_consumption:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='2' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0w5o4h31hg7f4v1773y5p0qa2566].[none:Goals:ok]</rows>
+        <cols>[federated.0w5o4h31hg7f4v1773y5p0qa2566].[none:Year:qk]</cols>
+      </table>
+      <simple-id uuid='{E19AC8AD-2C4D-402E-8700-7090FF1957E1}' />
+    </worksheet>
+    <worksheet name='Beer consumption inflation'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Beer consumption inflation </run>
+            <run fontcolor='#f28e2b'>(SICK! PLS DO NOT USE)</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='merged_df' name='federated.0w5o4h31hg7f4v1773y5p0qa2566' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0w5o4h31hg7f4v1773y5p0qa2566'>
+            <column caption='Beer consumption' datatype='integer' name='[Beer_consumption]' role='measure' type='quantitative' />
+            <column caption='Inflation Rate' datatype='string' name='[Inflation_Rate]' role='dimension' type='nominal' />
+            <column-instance column='[Inflation_Rate]' derivation='None' name='[none:Inflation_Rate:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Beer_consumption]' derivation='Sum' name='[sum:Beer_consumption:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <manual-sort column='[federated.0w5o4h31hg7f4v1773y5p0qa2566].[none:Inflation_Rate:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;0.2&quot;</bucket>
+              <bucket>&quot;0.4&quot;</bucket>
+              <bucket>&quot;0.6&quot;</bucket>
+              <bucket>&quot;0.7&quot;</bucket>
+              <bucket>&quot;1.1&quot;</bucket>
+              <bucket>&quot;1.3&quot;</bucket>
+              <bucket>&quot;1.4&quot;</bucket>
+              <bucket>&quot;1.5&quot;</bucket>
+              <bucket>&quot;1.6&quot;</bucket>
+              <bucket>&quot;1.7&quot;</bucket>
+              <bucket>&quot;1.8&quot;</bucket>
+              <bucket>&quot;1.9&quot;</bucket>
+              <bucket>&quot;2.5&quot;</bucket>
+              <bucket>&quot;2.7&quot;</bucket>
+              <bucket>&quot;2.8&quot;</bucket>
+              <bucket>&quot;4.5&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.0w5o4h31hg7f4v1773y5p0qa2566].[none:Inflation_Rate:nk]' value='39' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.0w5o4h31hg7f4v1773y5p0qa2566].[sum:Beer_consumption:qk]' palette='orange_blue_diverging_10_0' type='interpolated' />
+            <encoding attr='size' field='[federated.0w5o4h31hg7f4v1773y5p0qa2566].[sum:Beer_consumption:qk]' field-type='quantitative' max-size='1' min-size='0' type='rangesize' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.0w5o4h31hg7f4v1773y5p0qa2566].[sum:Beer_consumption:qk]' />
+              <size column='[federated.0w5o4h31hg7f4v1773y5p0qa2566].[sum:Beer_consumption:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='2.1546962261199951' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0w5o4h31hg7f4v1773y5p0qa2566].[sum:Beer_consumption:qk]</rows>
+        <cols>[federated.0w5o4h31hg7f4v1773y5p0qa2566].[none:Inflation_Rate:nk]</cols>
+      </table>
+      <simple-id uuid='{D932D7E1-DAB8-4B25-A527-D1D0BBA3912C}' />
+    </worksheet>
+    <worksheet name='Beer consumption inflation years'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Beer consumption inflation, year</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='merged_df' name='federated.0w5o4h31hg7f4v1773y5p0qa2566' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0w5o4h31hg7f4v1773y5p0qa2566'>
+            <column caption='Beer consumption' datatype='integer' name='[Beer_consumption]' role='measure' type='quantitative' />
+            <column caption='Inflation Rate' datatype='string' name='[Inflation_Rate]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[Year]' role='dimension' type='quantitative' />
+            <column-instance column='[Inflation_Rate]' derivation='None' name='[none:Inflation_Rate:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Year]' derivation='None' name='[none:Year:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Beer_consumption]' derivation='Sum' name='[sum:Beer_consumption:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.0w5o4h31hg7f4v1773y5p0qa2566].[none:Inflation_Rate:nk]' direction='ASC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.0w5o4h31hg7f4v1773y5p0qa2566].[sum:Beer_consumption:qk]' shelf='rows' />
+          </shelf-sorts>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='height' field='[federated.0w5o4h31hg7f4v1773y5p0qa2566].[none:Year:qk]' value='88' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='height' field='[federated.0w5o4h31hg7f4v1773y5p0qa2566].[none:Inflation_Rate:nk]' value='26' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.0w5o4h31hg7f4v1773y5p0qa2566].[none:Inflation_Rate:nk]' value='104' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.0w5o4h31hg7f4v1773y5p0qa2566].[sum:Beer_consumption:qk]' palette='orange_blue_diverging_10_0' type='interpolated' />
+            <encoding attr='size' field='[federated.0w5o4h31hg7f4v1773y5p0qa2566].[sum:Beer_consumption:qk]' field-type='quantitative' max-size='1' min-size='0' type='rangesize' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.0w5o4h31hg7f4v1773y5p0qa2566].[sum:Beer_consumption:qk]' />
+              <size column='[federated.0w5o4h31hg7f4v1773y5p0qa2566].[sum:Beer_consumption:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='2.3314917087554932' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0w5o4h31hg7f4v1773y5p0qa2566].[none:Inflation_Rate:nk]</rows>
+        <cols>[federated.0w5o4h31hg7f4v1773y5p0qa2566].[none:Year:qk]</cols>
+      </table>
+      <simple-id uuid='{47F5F9BD-C36D-4FD5-9163-F390054E6474}' />
+    </worksheet>
+    <worksheet name='Beer consumption visitors'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Beer consumption visitors </run>
+            <run fontcolor='#f28e2b'>(SICK! PLS DO NOT USE)</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='merged_df' name='federated.0w5o4h31hg7f4v1773y5p0qa2566' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0w5o4h31hg7f4v1773y5p0qa2566'>
+            <column caption='Beer consumption' datatype='integer' name='[Beer_consumption]' role='measure' type='quantitative' />
+            <column caption='Visitors total' datatype='string' name='[Visitors_total]' role='dimension' type='nominal' />
+            <column-instance column='[Visitors_total]' derivation='None' name='[none:Visitors_total:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Beer_consumption]' derivation='Sum' name='[sum:Beer_consumption:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='height' field='[federated.0w5o4h31hg7f4v1773y5p0qa2566].[none:Visitors_total:nk]' value='88' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.0w5o4h31hg7f4v1773y5p0qa2566].[none:Visitors_total:nk]' value='50' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.0w5o4h31hg7f4v1773y5p0qa2566].[sum:Beer_consumption:qk]' palette='orange_blue_diverging_10_0' type='interpolated' />
+            <encoding attr='size' field='[federated.0w5o4h31hg7f4v1773y5p0qa2566].[sum:Beer_consumption:qk]' field-type='quantitative' max-size='1' min-size='0' type='rangesize' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.0w5o4h31hg7f4v1773y5p0qa2566].[sum:Beer_consumption:qk]' />
+              <size column='[federated.0w5o4h31hg7f4v1773y5p0qa2566].[sum:Beer_consumption:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='1.813093900680542' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0w5o4h31hg7f4v1773y5p0qa2566].[sum:Beer_consumption:qk]</rows>
+        <cols>[federated.0w5o4h31hg7f4v1773y5p0qa2566].[none:Visitors_total:nk]</cols>
+      </table>
+      <simple-id uuid='{961CA244-80BC-4808-B5F4-1C0E064E0DCF}' />
+    </worksheet>
+    <worksheet name='Beer consumption visitors years'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Beer consumption visitors</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='merged_df' name='federated.0w5o4h31hg7f4v1773y5p0qa2566' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0w5o4h31hg7f4v1773y5p0qa2566'>
+            <column caption='Beer consumption' datatype='integer' name='[Beer_consumption]' role='measure' type='quantitative' />
+            <column caption='Visitors total' datatype='string' name='[Visitors_total]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[Year]' role='dimension' type='quantitative' />
+            <column-instance column='[Visitors_total]' derivation='None' name='[none:Visitors_total:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Year]' derivation='None' name='[none:Year:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Beer_consumption]' derivation='Sum' name='[sum:Beer_consumption:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <_.fcp.SingleValuePerNestSorting.true...single-value-per-nest-shelf-sorts>
+            <single-value-per-nest-shelf-sort dimension-to-sort='[federated.0w5o4h31hg7f4v1773y5p0qa2566].[none:Visitors_total:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.0w5o4h31hg7f4v1773y5p0qa2566].[none:Visitors_total:nk]' shelf='rows' />
+          </_.fcp.SingleValuePerNestSorting.true...single-value-per-nest-shelf-sorts>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='height' field='[federated.0w5o4h31hg7f4v1773y5p0qa2566].[none:Year:qk]' value='67' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='height' field='[federated.0w5o4h31hg7f4v1773y5p0qa2566].[none:Visitors_total:nk]' value='34' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.0w5o4h31hg7f4v1773y5p0qa2566].[none:Visitors_total:nk]' value='88' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.0w5o4h31hg7f4v1773y5p0qa2566].[sum:Beer_consumption:qk]' palette='orange_blue_diverging_10_0' type='interpolated' />
+            <encoding attr='size' field='[federated.0w5o4h31hg7f4v1773y5p0qa2566].[sum:Beer_consumption:qk]' field-type='quantitative' max-size='1' min-size='0' type='rangesize' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.0w5o4h31hg7f4v1773y5p0qa2566].[sum:Beer_consumption:qk]' />
+              <size column='[federated.0w5o4h31hg7f4v1773y5p0qa2566].[sum:Beer_consumption:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='1.6151933670043945' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0w5o4h31hg7f4v1773y5p0qa2566].[none:Visitors_total:nk]</rows>
+        <cols>[federated.0w5o4h31hg7f4v1773y5p0qa2566].[none:Year:qk]</cols>
+      </table>
+      <simple-id uuid='{FE80FD68-00DD-4522-A965-BC317FC9B078}' />
+    </worksheet>
+    <worksheet name='Beer consumption, price '>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Beer consumption, price (without year)</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='merged_df' name='federated.0w5o4h31hg7f4v1773y5p0qa2566' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0w5o4h31hg7f4v1773y5p0qa2566'>
+            <column caption='Beer consumption' datatype='integer' name='[Beer_consumption]' role='measure' type='quantitative' />
+            <column caption='Beer price' datatype='string' name='[Beer_price]' role='dimension' type='nominal' />
+            <column caption='beer price' datatype='real' name='[Calculation_5072108759543296003]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='FLOAT([Beer_price])' />
+            </column>
+            <column-instance column='[Calculation_5072108759543296003]' derivation='None' name='[none:Calculation_5072108759543296003:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Calculation_5072108759543296003]' derivation='None' name='[none:Calculation_5072108759543296003:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Beer_consumption]' derivation='Sum' name='[sum:Beer_consumption:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0w5o4h31hg7f4v1773y5p0qa2566].[none:Calculation_5072108759543296003:ok]'>
+            <groupfilter function='except' user:ui-domain='database' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:Calculation_5072108759543296003:ok]' />
+              <groupfilter function='member' level='[none:Calculation_5072108759543296003:ok]' member='6.75' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0w5o4h31hg7f4v1773y5p0qa2566].[none:Calculation_5072108759543296003:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.0w5o4h31hg7f4v1773y5p0qa2566].[none:Calculation_5072108759543296003:qk]' palette='blue_10_0' type='interpolated' />
+            <encoding attr='color' field='[federated.0w5o4h31hg7f4v1773y5p0qa2566].[sum:Beer_consumption:qk]' palette='orange_blue_diverging_10_0' type='interpolated' />
+            <encoding attr='size' field='[federated.0w5o4h31hg7f4v1773y5p0qa2566].[sum:Beer_consumption:qk]' field-type='quantitative' max-size='1' min-size='0' type='rangesize' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.0w5o4h31hg7f4v1773y5p0qa2566].[sum:Beer_consumption:qk]' />
+              <size column='[federated.0w5o4h31hg7f4v1773y5p0qa2566].[sum:Beer_consumption:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='1.813093900680542' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0w5o4h31hg7f4v1773y5p0qa2566].[sum:Beer_consumption:qk]</rows>
+        <cols>[federated.0w5o4h31hg7f4v1773y5p0qa2566].[none:Calculation_5072108759543296003:qk]</cols>
+      </table>
+      <simple-id uuid='{DF3C6D1D-A4F9-40D4-8901-6086527E875A}' />
+    </worksheet>
+    <worksheet name='Beer consumption, price &amp; years'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Beer consumption, price &amp; years</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='merged_df' name='federated.0w5o4h31hg7f4v1773y5p0qa2566' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0w5o4h31hg7f4v1773y5p0qa2566'>
+            <column caption='Beer consumption' datatype='integer' name='[Beer_consumption]' role='measure' type='quantitative' />
+            <column caption='Beer price' datatype='string' name='[Beer_price]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[Year]' role='dimension' type='quantitative' />
+            <column-instance column='[Beer_price]' derivation='None' name='[none:Beer_price:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Year]' derivation='None' name='[none:Year:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Beer_consumption]' derivation='Sum' name='[sum:Beer_consumption:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <manual-sort column='[federated.0w5o4h31hg7f4v1773y5p0qa2566].[none:Beer_price:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;10.87&quot;</bucket>
+              <bucket>&quot;10.57&quot;</bucket>
+              <bucket>&quot;9.78&quot;</bucket>
+              <bucket>&quot;10.27&quot;</bucket>
+              <bucket>&quot;9.09&quot;</bucket>
+              <bucket>&quot;8.53&quot;</bucket>
+              <bucket>&quot;8.25&quot;</bucket>
+              <bucket>&quot;7.42&quot;</bucket>
+              <bucket>&quot;7.15&quot;</bucket>
+              <bucket>&quot;6.75&quot;</bucket>
+              <bucket>&quot;6.35&quot;</bucket>
+              <bucket>&quot;5.8&quot;</bucket>
+              <bucket>&quot;5.6&quot;</bucket>
+              <bucket>&quot;5.45&quot;</bucket>
+              <bucket>&quot;5.24&quot;</bucket>
+              <bucket>&quot;5.15&quot;</bucket>
+              <bucket>&quot;4.89&quot;</bucket>
+              <bucket>&quot;4.71&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.0w5o4h31hg7f4v1773y5p0qa2566].[sum:Beer_consumption:qk]' palette='orange_blue_diverging_10_0' type='interpolated' />
+            <encoding attr='size' field='[federated.0w5o4h31hg7f4v1773y5p0qa2566].[sum:Beer_consumption:qk]' field-type='quantitative' max-size='1' min-size='0' type='rangesize' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.0w5o4h31hg7f4v1773y5p0qa2566].[sum:Beer_consumption:qk]' />
+              <size column='[federated.0w5o4h31hg7f4v1773y5p0qa2566].[sum:Beer_consumption:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='2.5524861812591553' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0w5o4h31hg7f4v1773y5p0qa2566].[none:Beer_price:nk]</rows>
+        <cols>[federated.0w5o4h31hg7f4v1773y5p0qa2566].[none:Year:qk]</cols>
+      </table>
+      <simple-id uuid='{4A920744-CBAA-4BBB-9173-B6502E58A388}' />
+    </worksheet>
+    <worksheet name='beer consumption chicken'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Beer consumption chicken</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='merged_df' name='federated.0w5o4h31hg7f4v1773y5p0qa2566' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0w5o4h31hg7f4v1773y5p0qa2566'>
+            <column caption='Beer consumption' datatype='integer' name='[Beer_consumption]' role='measure' type='quantitative' />
+            <column aggregation='Sum' caption='Chicken consumption' datatype='integer' name='[Chicken_consumption]' role='dimension' type='ordinal' />
+            <column-instance column='[Beer_consumption]' derivation='None' name='[none:Beer_consumption:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Chicken_consumption]' derivation='Sum' name='[sum:Chicken_consumption:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.0w5o4h31hg7f4v1773y5p0qa2566].[sum:Chicken_consumption:qk]' palette='orange_blue_diverging_10_0' type='interpolated' />
+            <encoding attr='size' field='[federated.0w5o4h31hg7f4v1773y5p0qa2566].[sum:Chicken_consumption:qk]' field-type='quantitative' max-size='1' min-size='0' type='rangesize' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.0w5o4h31hg7f4v1773y5p0qa2566].[sum:Chicken_consumption:qk]' />
+              <size column='[federated.0w5o4h31hg7f4v1773y5p0qa2566].[sum:Chicken_consumption:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='1.8837499618530273' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0w5o4h31hg7f4v1773y5p0qa2566].[sum:Chicken_consumption:qk]</rows>
+        <cols>[federated.0w5o4h31hg7f4v1773y5p0qa2566].[none:Beer_consumption:qk]</cols>
+      </table>
+      <simple-id uuid='{5A98ECA8-B332-4D0C-B7E5-5DA4C9EF7081}' />
+    </worksheet>
+    <worksheet name='beer consumption chicken across years'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>beer consumption chicken across years</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='merged_df' name='federated.0w5o4h31hg7f4v1773y5p0qa2566' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0w5o4h31hg7f4v1773y5p0qa2566'>
+            <column caption='Beer consumption' datatype='integer' name='[Beer_consumption]' role='measure' type='quantitative' />
+            <column aggregation='Sum' caption='Chicken consumption' datatype='integer' name='[Chicken_consumption]' role='dimension' type='ordinal' />
+            <column datatype='integer' name='[Year]' role='dimension' type='quantitative' />
+            <column-instance column='[Chicken_consumption]' derivation='None' name='[none:Chicken_consumption:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Year]' derivation='None' name='[none:Year:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Beer_consumption]' derivation='Sum' name='[sum:Beer_consumption:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.0w5o4h31hg7f4v1773y5p0qa2566].[none:Chicken_consumption:ok]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.0w5o4h31hg7f4v1773y5p0qa2566].[none:Chicken_consumption:ok]' shelf='rows' />
+          </shelf-sorts>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.0w5o4h31hg7f4v1773y5p0qa2566].[sum:Beer_consumption:qk]' palette='orange_blue_diverging_10_0' type='interpolated' />
+            <encoding attr='size' field='[federated.0w5o4h31hg7f4v1773y5p0qa2566].[sum:Beer_consumption:qk]' field-type='quantitative' max-size='1' min-size='0' type='rangesize' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.0w5o4h31hg7f4v1773y5p0qa2566].[sum:Beer_consumption:qk]' />
+              <size column='[federated.0w5o4h31hg7f4v1773y5p0qa2566].[sum:Beer_consumption:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='2.1369595527648926' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0w5o4h31hg7f4v1773y5p0qa2566].[none:Chicken_consumption:ok]</rows>
+        <cols>[federated.0w5o4h31hg7f4v1773y5p0qa2566].[none:Year:qk]</cols>
+      </table>
+      <simple-id uuid='{00676B55-B5B4-48E5-A573-C49086B71DC5}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' name='Beer consumption, price &amp; years'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0w5o4h31hg7f4v1773y5p0qa2566].[sum:Beer_consumption:qk]' type='color' />
+            <card pane-specification-id='0' param='[federated.0w5o4h31hg7f4v1773y5p0qa2566].[sum:Beer_consumption:qk]' type='size' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{3C9FB098-F0BF-49B6-A024-4BFBFD5E2AA0}' />
+    </window>
+    <window class='worksheet' name='Beer consumption, price '>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0w5o4h31hg7f4v1773y5p0qa2566].[sum:Beer_consumption:qk]' type='color' />
+            <card pane-specification-id='0' param='[federated.0w5o4h31hg7f4v1773y5p0qa2566].[sum:Beer_consumption:qk]' type='size' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{9ACE5A65-F48D-4BCB-9918-71A906A9B0DC}' />
+    </window>
+    <window class='worksheet' name='Beer consumption &amp; goals'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0w5o4h31hg7f4v1773y5p0qa2566].[sum:Beer_consumption:qk]' type='color' />
+            <card pane-specification-id='0' param='[federated.0w5o4h31hg7f4v1773y5p0qa2566].[sum:Beer_consumption:qk]' type='size' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{7B7FA299-F5DC-47BF-9EB2-0A618D4A1B55}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Beer consumption inflation'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0w5o4h31hg7f4v1773y5p0qa2566].[sum:Beer_consumption:qk]' type='color' />
+            <card pane-specification-id='0' param='[federated.0w5o4h31hg7f4v1773y5p0qa2566].[sum:Beer_consumption:qk]' type='size' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{C84E54E1-22AF-4AAA-8D0E-A48401C0983F}' />
+    </window>
+    <window class='worksheet' name='Beer consumption inflation years'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0w5o4h31hg7f4v1773y5p0qa2566].[sum:Beer_consumption:qk]' type='size' />
+            <card pane-specification-id='0' param='[federated.0w5o4h31hg7f4v1773y5p0qa2566].[sum:Beer_consumption:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{900467BC-9F3C-4035-B3CA-B1FA97CA534C}' />
+    </window>
+    <window class='worksheet' name='Beer consumption visitors'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0w5o4h31hg7f4v1773y5p0qa2566].[sum:Beer_consumption:qk]' type='color' />
+            <card pane-specification-id='0' param='[federated.0w5o4h31hg7f4v1773y5p0qa2566].[sum:Beer_consumption:qk]' type='size' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{A1E84E50-8BEC-4A09-A23F-FA7115F8F6B4}' />
+    </window>
+    <window class='worksheet' name='Beer consumption visitors years'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0w5o4h31hg7f4v1773y5p0qa2566].[sum:Beer_consumption:qk]' type='color' />
+            <card pane-specification-id='0' param='[federated.0w5o4h31hg7f4v1773y5p0qa2566].[sum:Beer_consumption:qk]' type='size' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{2F71179C-5146-4F28-97E2-E7FBA178772B}' />
+    </window>
+    <window class='worksheet' name='beer consumption chicken'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card size='31' type='pages' />
+            <card size='46' type='filters' />
+            <card size='175' type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0w5o4h31hg7f4v1773y5p0qa2566].[sum:Chicken_consumption:qk]' type='color' />
+            <card pane-specification-id='0' param='[federated.0w5o4h31hg7f4v1773y5p0qa2566].[sum:Chicken_consumption:qk]' type='size' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{EBAE072D-7E95-4A35-A0ED-5503A99803FB}' />
+    </window>
+    <window class='worksheet' name='beer consumption chicken across years'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0w5o4h31hg7f4v1773y5p0qa2566].[sum:Beer_consumption:qk]' type='color' />
+            <card pane-specification-id='0' param='[federated.0w5o4h31hg7f4v1773y5p0qa2566].[sum:Beer_consumption:qk]' type='size' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{4E952DE3-1370-4EF0-9E4E-85363AE28CB6}' />
+    </window>
+  </windows>
+</workbook>
