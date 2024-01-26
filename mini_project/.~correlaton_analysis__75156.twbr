@@ -801,7 +801,7 @@
       <layout-options>
         <title>
           <formatted-text>
-            <run>Beer consumption, price &amp; years</run>
+            <run>Timeline of beer consumption x price </run>
           </formatted-text>
         </title>
       </layout-options>
@@ -1009,7 +1009,7 @@
       </cards>
       <simple-id uuid='{3C9FB098-F0BF-49B6-A024-4BFBFD5E2AA0}' />
     </window>
-    <window class='worksheet' name='Beer consumption, price '>
+    <window class='worksheet' maximized='true' name='Beer consumption, price '>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -1067,7 +1067,7 @@
       </cards>
       <simple-id uuid='{7B7FA299-F5DC-47BF-9EB2-0A618D4A1B55}' />
     </window>
-    <window class='worksheet' maximized='true' name='Beer consumption inflation'>
+    <window class='worksheet' name='Beer consumption inflation'>
       <cards>
         <edge name='left'>
           <strip size='160'>
